@@ -7,7 +7,6 @@
       overflow-x: hidden;
     }
 
-    /* ─── PAGE ─── */
     .page {
       position: relative;
       width: 1440px;
@@ -18,15 +17,11 @@
       overflow: hidden;
     }
 
-    /* ═══════════════════════════════
-       NAVBAR
-    ═══════════════════════════════ */
     .navbar {
       position: absolute;
       height: 162px;
       left: 0; right: 0; top: 0;
     }
-    /* IMAGEN: fondo_recortado.png — logo pingüino navbar */
     .nav-logo {
       position: absolute;
       left: 81px; top: 6px;
@@ -61,9 +56,6 @@
       border: none; cursor: pointer;
     }
 
-    /* ═══════════════════════════════
-       TÍTULO DE LA PÁGINA
-    ═══════════════════════════════ */
     .page-title {
       position: absolute;
       width: 632px;
@@ -78,14 +70,9 @@
       color: #000;
     }
 
-    /* ═══════════════════════════════
-       SUBTÍTULO / DESCRIPCIÓN
-    ═══════════════════════════════ */
     .page-subtitle {
       position: absolute;
-      /* left: 36.18% de 1440 = ~521px */
       left: 521px;
-      /* right: 12.92% de 1440 = ~186px → ancho = 1440 - 521 - 186 = 733px */
       width: 733px;
       top: 245px;
       height: 72px;
@@ -98,54 +85,33 @@
       color: rgba(0,0,0,0.75);
     }
 
-    /* ═══════════════════════════════
-       FRAME SCROLLEABLE CON EL SVG
-       ─────────────────────────────
-       Según Figma:
-         width:  1281px
-         height:  650px
-         left:    79px
-         top:    329px
-         overflow: scroll (ambas direcciones)
 
-       El SVG interno mide:
-         width:  3520px
-         height: 12510px
-       → El usuario puede hacer scroll horizontal (3520 > 1281)
-         y vertical (12510 > 650) dentro del frame.
-
-       ARCHIVO: Linux_Distribution_Timeline.svg
-    ═══════════════════════════════ */
     .timeline-frame {
       position: absolute;
       width: 1281px;
       height: 650px;
       left: 79px;
       top: 329px;
-      overflow: scroll;           /* scroll en ambas direcciones */
-      scrollbar-width: none;       /* Firefox */
-      -ms-overflow-style: none;   /* IE */
+      overflow: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       background: #fff;
       cursor: grab;
     }
 
     .timeline-frame::-webkit-scrollbar {
-      display: none;              /* Chrome/Safari/Edge */
+      display: none;
     }
 
-    /* El SVG respeta sus dimensiones originales del Figma */
     .timeline-frame img {
       display: block;
       width: 3520px;
       height: 12510px;
-      /* Usar object-fit: none para que NO se escale */
       object-fit: none;
       object-position: top left;
     }
 
-    /* ═══════════════════════════════
-       FOOTER
-    ═══════════════════════════════ */
+
     .footer {
       position: absolute;
       height: 178px; left: 0; right: 0; bottom: 0;
@@ -163,7 +129,6 @@
       position: absolute; left: 186px; top: 106px;
       font-weight: 400; font-size: 24px; line-height: 150%; color: #fff;
     }
-    /* IMAGEN: 291375-middle.png — avatar caballero */
     .footer-avatar {
       position: absolute; left: 364px; top: 94px;
       width: 64px; height: 64px; border-radius: 50%;

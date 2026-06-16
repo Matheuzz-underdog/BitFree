@@ -7,7 +7,6 @@
       overflow-x: hidden;
     }
 
-    /* ─── PAGE ─── */
     .page {
       position: relative;
       width: 1440px;
@@ -18,15 +17,11 @@
       overflow: hidden;
     }
 
-    /* ═══════════════════════════════
-       NAVBAR
-    ═══════════════════════════════ */
     .navbar {
       position: absolute;
       height: 162px;
       left: 0; right: 0; top: 0;
     }
-    /* IMAGEN: fondo_recortado.png — logo pingüino */
     .nav-logo {
       position: absolute;
       left: 81px; top: 6px;
@@ -61,9 +56,6 @@
       border: none; cursor: pointer;
     }
 
-    /* ═══════════════════════════════
-       FORMULARIO (izquierda)
-    ═══════════════════════════════ */
     .formulario {
       position: absolute;
       display: flex;
@@ -74,7 +66,7 @@
       left: 101px; top: 195px;
     }
 
-    /* Leyenda / encabezado del form */
+
     .form-legend {
       display: flex; flex-direction: column;
       align-items: flex-start; gap: 4px;
@@ -89,7 +81,7 @@
       color: #000;
     }
 
-    /* Grupo de campo (label + input) */
+
     .field-group {
       display: flex; flex-direction: column;
       align-items: flex-start; gap: 8px;
@@ -121,7 +113,7 @@
       border-color: #1E1E1E;
       color: #1E1E1E;
     }
-    /* Select con flecha personalizada */
+
     .select-wrapper {
       position: relative; width: 431px;
     }
@@ -138,7 +130,7 @@
       pointer-events: none;
     }
 
-    /* Botón Enviar */
+
     .btn-enviar {
       position: absolute;
       display: flex; justify-content: center; align-items: center;
@@ -153,14 +145,6 @@
     }
     .btn-enviar:hover { background: #222; }
 
-    /* ═══════════════════════════════
-       PANEL TOP 3 (derecha)
-       ─────────────────────────────
-       NOTA: Los recuadros bajo 1#, 2#, 3#
-       recibirán datos de base de datos.
-       Actualmente muestran texto gris
-       como placeholder visual.
-    ═══════════════════════════════ */
     .resultados {
       position: absolute;
       width: 663px; height: 402px;
@@ -178,19 +162,15 @@
       color: #fff;
     }
 
-    /* ── Podio ──
-       Posiciones relativas al contenedor .resultados
-       Layout: 2# (izq) — 1# (centro, más alto) — 3# (der)
-    */
 
-    /* Etiqueta 1# — centro, arriba */
+
     .rank-label-1 {
       position: absolute;
       left: 287px; top: 102px;
       font-weight: 600; font-size: 40px; line-height: 120%;
       color: #fff;
     }
-    /* Recuadro BD 1er lugar — centro */
+
     .rank-box-1 {
       position: absolute;
       left: 255px; top: 161px;
@@ -204,14 +184,14 @@
       color: #1E1E1E;
     }
 
-    /* Etiqueta 2# — izquierda, abajo */
+
     .rank-label-2 {
       position: absolute;
       left: 89px; top: 228px;
       font-weight: 600; font-size: 40px; line-height: 120%;
       color: #fff;
     }
-    /* Recuadro BD 2do lugar — izquierda */
+
     .rank-box-2 {
       position: absolute;
       left: 57px; top: 280px;
@@ -225,14 +205,14 @@
       color: #1E1E1E;
     }
 
-    /* Etiqueta 3# — derecha, abajo */
+
     .rank-label-3 {
       position: absolute;
       left: 507px; top: 228px;
       font-weight: 600; font-size: 40px; line-height: 120%;
       color: #fff;
     }
-    /* Recuadro BD 3er lugar — derecha */
+
     .rank-box-3 {
       position: absolute;
       left: 475px; top: 280px;
@@ -246,9 +226,6 @@
       color: #1E1E1E;
     }
 
-    /* ═══════════════════════════════
-       FOOTER
-    ═══════════════════════════════ */
     .footer {
       position: absolute;
       height: 178px; left: 0; right: 0; bottom: 0;
@@ -266,7 +243,6 @@
       position: absolute; left: 186px; top: 106px;
       font-weight: 400; font-size: 24px; line-height: 150%; color: #fff;
     }
-    /* IMAGEN: 291375-middle.png — avatar caballero */
     .footer-avatar {
       position: absolute; left: 364px; top: 94px;
       width: 64px; height: 64px; border-radius: 50%;

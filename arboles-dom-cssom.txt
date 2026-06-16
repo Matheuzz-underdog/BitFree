@@ -1,0 +1,256 @@
+PROYECTO: BITFREE
+ARBOLES DOM + CSSOM GENERAL
+============================================================
+
+
+1. ÁRBOL DOM GENERAL (Estructura compartida por las 4 vistas)
+=============================================================
+
+<!DOCTYPE html>
+<html lang="es">
+│
+├── <head>
+│   ├── <meta charset="UTF-8">
+│   ├── <meta name="viewport" content="width=1440">
+│   ├── <title> (varia por pagina: "Bitfree — ...")</title>
+│   ├── <link rel="preconnect" href="https://fonts.googleapis.com">
+│   ├── <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+│   ├── <link href="Google Fonts Inter" rel="stylesheet">
+│   └── <link rel="stylesheet" href="/stylesheets/{pagina}.css">
+│
+└── <body>
+    │
+    └── <div class="page">
+        │
+        ├── <header>
+        │   └── <nav class="navbar" aria-label="Menu principal">
+        │       ├── <div class="nav-logo">
+        │       │   └── <a href="/">
+        │       │       └── <img src="/images/fondo recortado.png" alt="Bitfree logo">
+        │       ├── <a class="nav-brand" href="/">Bitfree</a>
+        │       └── <div class="nav-items">
+        │           ├── <a href="/que-es-linux">?Que es Linux?</a>
+        │           ├── <a href="/encuesta">Encuesta</a>
+        │           ├── <a href="/timeline">Distribuciones-Timeline</a>
+        │           └── <button class="btn-salir">Salir</button>
+        │
+        ├── <main id="main">
+        │   │
+        │   │   ╔═══ LANDING (/ landing.ejs) ═══╗
+        │   │   ├── <h1 class="hero-title">...<h1>
+        │   │   ├── <div class="hero-columns">
+        │   │   │   ├── <div class="column-descubrir">
+        │   │   │   │   └── <div class="column-content"> ... </div>
+        │   │   │   ├── <div class="column-opinar">
+        │   │   │   │   └── <div class="column-content"> ... </div>
+        │   │   │   └── <div class="column-explorar">
+        │   │   │       └── <div class="column-content"> ... </div>
+        │   │   ╚══════════════════════════════════╝
+        │   │
+        │   │   ╔═══ QUE ES LINUX (/ que-es-linux.ejs) ═══╗
+        │   │   ├── <h1 class="heading-gnu">Gnu/linux</h1>
+        │   │   ├── <img class="img-gnu" src="/images/gnu.png">
+        │   │   ├── <img class="img-tux" src="/images/tux.png">
+        │   │   ├── <div class="copy-gnu">
+        │   │   │   └── <p class="copy-text">... (2 parrafos)
+        │   │   ├── <h2 class="heading-distros">Distribuciones</h2>
+        │   │   ├── <div class="carousel-wrap" id="carousel">
+        │   │   │   └── <div class="carousel-slide"> (x8)
+        │   │   │       ├── <img src="/images/..." alt="...">
+        │   │   │       └── <div class="carousel-overlay">
+        │   │   │           └── <span class="carousel-label">Nombre</span>
+        │   │   └── <div class="copy-distros">
+        │   │       └── <p class="copy-text">... (3 parrafos)
+        │   │   ╚═══════════════════════════════════════════╝
+        │   │
+        │   │   ╔═══ ENCUESTA (/ encuesta.ejs) ═══╗
+        │   │   ├── <form id="form-encuesta" novalidate>
+        │   │   │   ├── <div class="formulario">
+        │   │   │   │   ├── <div class="form-legend">
+        │   │   │   │   │   ├── <h2>Formulario de inscricion</h2>
+        │   │   │   │   │   └── <p>Ingresa tus datos para la encuesta</p>
+        │   │   │   │   ├── <div class="field-group">
+        │   │   │   │   │   ├── <label for="nombre">Primer nombre y apellido</label>
+        │   │   │   │   │   └── <input id="nombre" type="text" placeholder="Jose jose">
+        │   │   │   │   ├── <div class="field-group">
+        │   │   │   │   │   ├── <label for="edad">Edad</label>
+        │   │   │   │   │   └── <input id="edad" type="number" min="0" max="120">
+        │   │   │   │   ├── <div class="field-group">
+        │   │   │   │   │   ├── <label for="sexo">Sexo</label>
+        │   │   │   │   │   └── <div class="select-wrapper">
+        │   │   │   │   │       └── <select id="sexo">...</select>
+        │   │   │   │   ├── <div class="field-group">
+        │   │   │   │   │   ├── <label for="email">Correo electronico</label>
+        │   │   │   │   │   └── <input id="email" type="email">
+        │   │   │   │   └── <div class="field-group">
+        │   │   │   │       ├── <label for="distro">Escribe tu distribucion Favorita</label>
+        │   │   │   │       └── <input id="distro" type="text">
+        │   │   │   └── <button class="btn-enviar" type="submit">Enviar</button>
+        │   │   │
+        │   │   └── <section class="resultados" aria-label="Top 3 distribuciones">
+        │   │       ├── <h2 class="resultados-title">Top 3 distribuciones</h2>
+        │   │       └── <ol>
+        │   │           ├── <li>
+        │   │           │   ├── <span class="rank-label-1">1#</span>
+        │   │           │   └── <div class="rank-box-1" id="rank-1">1</div>
+        │   │           ├── <li>
+        │   │           │   ├── <span class="rank-label-2">2#</span>
+        │   │           │   └── <div class="rank-box-2" id="rank-2">2</div>
+        │   │           └── <li>
+        │   │               ├── <span class="rank-label-3">3#</span>
+        │   │               └── <div class="rank-box-3" id="rank-3">3</div>
+        │   │   ╚═══════════════════════════════════════════╝
+        │   │
+        │   │   ╔═══ TIMELINE (/ timeline.ejs) ═══╗
+        │   │   ├── <h1 class="page-title">Los 35 anos de Linux</h1>
+        │   │   ├── <p class="page-subtitle">La siguiente es una imagen interactiva...</p>
+        │   │   └── <div class="timeline-frame" id="timelineFrame">
+        │   │       └── <img src="/images/Linux_Distribution_Timeline.svg"
+        │   │             alt="Linux Distribution Timeline...">
+        │   │   ╚═══════════════════════════════════════════╝
+        │   │
+        │   └── <footer class="footer">
+        │       ├── <div class="footer-divider"></div>
+        │       ├── <span class="footer-made-by">Creado y Mantenido por:</span>
+        │       ├── <span class="footer-author">Sergio Cuevas</span>
+        │       ├── <div class="footer-avatar">
+        │       │   └── <img src="/images/291375-middle.png" alt="Sergio Cuevas">
+        │       ├── <div class="icon-github" aria-hidden="true">
+        │       │   └── <svg>...</svg>
+        │       ├── <div class="icon-phone" aria-hidden="true">
+        │       │   └── <svg>...</svg>
+        │       ├── <a class="footer-repo" href="https://github.com/...">Repositorio del Sitio</a>
+        │       └── <div class="footer-phone">Tlf:0800-123456789</div>
+        │
+        └── <script src="/javascripts/{pagina}.js" defer></script>
+
+
+
+2. ARBOL CSSOM GENERAL
+=============================================================
+
+
+Regla                           | Selector                           | Propiedades clave
+─────────────────────────────────────────────────────────────────────────────────
+RESET                           | * / *::before / *::after           | box-sizing: border-box, margin: 0, padding: 0
+                                |                                     |
+BODY                            | body                               | font-family: 'Inter', sans-serif
+                                |                                     | background: #0F1A34
+                                |                                     | min-width: 1440px
+                                |                                     | overflow-x: hidden
+                                |                                     |
+PAGE                            | .page                              | width: 1440px, margin: 0 auto
+                                |                                     | background: linear-gradient(180deg, #9B9FAA → #0F1A34)
+                                |                                     | box-shadow, position: relative, overflow: hidden
+                                |                                     |
+═ NAVBAR ═══════════════════════╪═════════════════════════════════════╪══════════════════════════════════════
+                                | .navbar                            | position: absolute, top: 0, height: 162px
+                                | .nav-logo                          | left: 81px, top: 6px, 121x151px
+                                | .nav-logo img                      | width: 100%, object-fit: contain
+                                | .nav-brand                         | left: 101px, top: 89px, font-weight: 500
+                                | .nav-items                         | right: 80px, top: 56px, flex, gap: 48px, height: 52px
+                                | .nav-items a                       | color: #000, font-weight: 500, text-decoration: none
+                                | .nav-items a:hover                 | text-decoration: underline
+                                | .btn-salir                         | bg: #000, color: #fff, border-radius: 8px, 82x52px
+                                |                                     |
+═ CONTENIDO ESPECIFICO ═════════╪═════════════════════════════════════╪══════════════════════════════════════
+                                |                                     |
+── LANDING ──                   | .hero-title                        | font-size: 64px, font-weight: 700, color: #000
+                                | .hero-description                  | font-size: 24px, color: rgba(0,0,0,0.75)
+                                | .hero-columns                      | display: flex, gap: 66px, position: absolute
+                                | .column-content                    | bg: #E6D9C6, border-radius: 8px, padding
+                                |                                     |
+── QUE ES LINUX ──              | .heading-gnu                       | font-size: 64px, position: absolute, left: 81px
+                                | .img-gnu / .img-tux                | position: absolute, object-fit: contain
+                                | .copy-gnu                          | width: 724px, bg: #DAC0C0, border-radius: 5px, padding
+                                | .copy-text                         | font-weight: 500, font-size: 19px, color: #000
+                                | .heading-distros                   | font-size: 64px, position: absolute, left: 592px
+                                | .carousel-wrap                     | position: absolute, 602x368px, overflow: hidden
+                                | .carousel-slide                    | position: absolute, inset: 0, opacity: 0
+                                | .carousel-slide.active             | opacity: 1 (transition 0.65s)
+                                | .carousel-overlay                  | bg: gradient (transparent → black 60%)
+                                | .carousel-label                    | color: #fff, font-weight: 600, text-shadow
+                                | .copy-distros                      | width: 617px, bg: #DAC0C0, border-radius: 5px
+                                |                                     |
+── ENCUESTA ──                  | .formulario                        | flex column, position: absolute, left: 101px, top: 195px
+                                | .form-legend h2                    | font-size: 24px, font-weight: 600, color: #1E1E1E
+                                | .form-legend p                     | font-size: 16px, color: #000
+                                | .field-group                       | flex column, gap: 8px, width: 431px
+                                | .field-group label                 | font-size: 16px, color: #1E1E1E
+                                | .field-group input / select        | w: 431px, h: 40px, border-radius: 8px, border: 1px #D9D9D9
+                                | .field-group input::placeholder    | color: #B3B3B3
+                                | .select-wrapper::after             | pseudo-element → triangulo (custom arrow)
+                                | .btn-enviar                        | absolute, left: 101px, top: 765px, bg: #000, w: 431px
+                                | .resultados                        | absolute, left: 697px, top: 294px, w: 663px, bg: #000
+                                | .resultados-title                  | font-size: 48px, color: #fff, text-align: center
+                                | .rank-label-{1,2,3}                | position: absolute, font-size: 40px, color: #fff
+                                | .rank-box-{1,2,3}                  | position: absolute, bg: #fff, 120x40px, border-radius: 8px
+                                |                                     |
+── TIMELINE ──                  | .page-title                        | position: absolute, center, font-size: 64px, color: #000
+                                | .page-subtitle                     | w: 733px, left: 521px, font-size: 24px, text-align: right
+                                | .timeline-frame                    | w: 1281px, h: 650px, overflow: scroll, cursor: grab
+                                | .timeline-frame::-webkit-scrollbar | display: none
+                                | .timeline-frame img                | w: 3520px, h: 12510px, object-fit: none
+                                |                                     |
+═ FOOTER ═══════════════════════╪═════════════════════════════════════╪══════════════════════════════════════
+                                | .footer                            | position: absolute, bottom: 0, h: 178px
+                                | .footer-divider                    | width: 1280px, border-top: 1px solid #E6E6E6
+                                | .footer-made-by                    | left: 127px, top: 50px, font-size: 24px, color: #fff
+                                | .footer-author                     | left: 186px, top: 106px, font-size: 24px, color: #fff
+                                | .footer-avatar                     | left: 364px, 64x64px, border-radius: 50%, overflow: hidden
+                                | .footer-avatar img                 | width: 85%, object-fit: cover
+                                | .footer-repo                       | left: 991px, top: 55px, color: #CFCFCF, text-decoration: underline
+                                | .footer-phone                      | left: 991px, top: 115px, color: #fff
+                                | .icon-github                       | left: 1214px, top: 48px, 44x42px
+                                | .icon-phone                        | left: 1218px, top: 115px, 32x30px
+
+
+
+3. FLUJO BACKEND (MVC)
+=============================================================
+
+app.js
+  └── routes/views.routes.js  →  GET /, /que-es-linux, /encuesta, /timeline
+  │                               → res.render("{pagina}.ejs")
+  │
+  └── routes/encuesta.route.js  →  GET  /api/encuesta
+  │                               →  GET  /api/encuesta/distros
+  │                               →  POST /api/encuesta
+  │                                  │
+  │                                  └── controllers/encuesta.controller.js
+  │                                      ├── validaciones inline (email, sexo, edad, nombreCompleto, sanitizar)
+  │                                      └── delegacion a:
+  │                                          │
+  │                                          └── models/encuesta.model.js
+  │                                              ├── crear(data)       → INSERT INTO encuesta_linux
+  │                                              ├── obtenerTodas()    → SELECT *
+  │                                              ├── buscarPorCorreo() → SELECT WHERE correo = ?
+  │                                              └── obtenerDistros()  → SELECT distro
+  │                                                  │
+  │                                                  └── connections/connection.js
+  │                                                      └── mysql.createConnection({
+  │                                                            host: 'localhost',
+  │                                                            user: 'root',
+  │                                                            password: '',
+  │                                                            database: 'encuesta'
+  │                                                          })
+  │
+  └── public/javascripts/encuesta-conection.js  →  fetch("/api/encuesta/...")
+                                                    POST → submit form
+                                                    GET /distros → cargarTop3()
+
+
+4. ESQUEMA BASE DE DATOS
+=============================================================
+
+Base: encuesta
+Tabla: encuesta_linux
+
+CREATE TABLE encuesta_linux (
+  id               INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_completo  VARCHAR(255) NOT NULL,
+  edad             INT DEFAULT NULL,
+  sexo             ENUM('Masculino','Femenino','Otro') NOT NULL,
+  correo           VARCHAR(255) NOT NULL UNIQUE,
+  distro           VARCHAR(255) NOT NULL
+);

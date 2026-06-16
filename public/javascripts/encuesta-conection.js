@@ -54,6 +54,6 @@ async function cargarTop3() {
     document.getElementById("rank-2").textContent = top3[1] ? top3[1][0] : "—";
     document.getElementById("rank-3").textContent = top3[2] ? top3[2][0] : "—";
   } catch {
-    // silencioso si falla
+
   }
 }
