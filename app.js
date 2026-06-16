@@ -4,10 +4,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var encuestaRouter = require('./routes/encuesta.route');
+var viewsRouter = require('./routes/views.routes');
 
 var app = express();
+
+if (process.argv[2] === "dev") {
+  process.env.NODE_ENV = "development";
+  const pjson = require("./package.json");
+  console.log(`> DEV | ${pjson.name} v${pjson.version}`);
+} else {
+  process.env.NODE_ENV = "production";
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,8 +27,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', viewsRouter);
+app.use('/api/encuesta', encuestaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

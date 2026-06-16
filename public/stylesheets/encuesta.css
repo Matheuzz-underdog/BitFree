@@ -1,0 +1,297 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0F1A34;
+      min-width: 1440px;
+      overflow-x: hidden;
+    }
+
+    /* ─── PAGE ─── */
+    .page {
+      position: relative;
+      width: 1440px;
+      height: 1101px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #9B9FAA 0%, #0F1A34 100%);
+      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════
+       NAVBAR
+    ═══════════════════════════════ */
+    .navbar {
+      position: absolute;
+      height: 162px;
+      left: 0; right: 0; top: 0;
+    }
+    /* IMAGEN: fondo_recortado.png — logo pingüino */
+    .nav-logo {
+      position: absolute;
+      left: 81px; top: 6px;
+      width: 121px; height: 151px;
+    }
+    .nav-logo img { width: 100%; height: 100%; object-fit: contain; }
+
+    .nav-brand {
+      position: absolute;
+      left: 101px; top: 89px;
+      font-weight: 500; font-size: 20px; line-height: 150%;
+      text-decoration: none;
+      color: #000;
+    }
+    .nav-items {
+      position: absolute;
+      right: 80px; top: 56px;
+      display: flex; align-items: center; gap: 48px; height: 52px;
+    }
+    .nav-items a {
+      font-weight: 500; font-size: 20px; line-height: 150%;
+      color: #000; text-decoration: none; white-space: nowrap; cursor: pointer;
+    }
+    .nav-items a:hover { text-decoration: underline; }
+    .btn-salir {
+      display: flex; justify-content: center; align-items: center;
+      padding: 14px 24px; width: 82px; height: 52px;
+      background: #000;
+      box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      font-weight: 500; font-size: 16px; color: #fff;
+      border: none; cursor: pointer;
+    }
+
+    /* ═══════════════════════════════
+       FORMULARIO (izquierda)
+    ═══════════════════════════════ */
+    .formulario {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      width: 431px;
+      left: 101px; top: 195px;
+    }
+
+    /* Leyenda / encabezado del form */
+    .form-legend {
+      display: flex; flex-direction: column;
+      align-items: flex-start; gap: 4px;
+      width: 431px;
+    }
+    .form-legend h2 {
+      font-weight: 600; font-size: 24px; line-height: 120%;
+      letter-spacing: -0.02em; color: #1E1E1E;
+    }
+    .form-legend p {
+      font-weight: 400; font-size: 16px; line-height: 140%;
+      color: #000;
+    }
+
+    /* Grupo de campo (label + input) */
+    .field-group {
+      display: flex; flex-direction: column;
+      align-items: flex-start; gap: 8px;
+      width: 431px;
+    }
+    .field-group label {
+      font-weight: 400; font-size: 16px; line-height: 140%;
+      color: #1E1E1E;
+    }
+    .field-group input,
+    .field-group select {
+      display: flex; flex-direction: row; align-items: center;
+      padding: 12px 16px;
+      width: 431px; height: 40px;
+      background: #fff;
+      border: 1px solid #D9D9D9;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400; font-size: 16px; line-height: 100%;
+      color: #1E1E1E;
+      outline: none;
+      appearance: none; -webkit-appearance: none;
+    }
+    .field-group input::placeholder {
+      color: #B3B3B3;
+    }
+    .field-group input:focus,
+    .field-group select:focus {
+      border-color: #1E1E1E;
+      color: #1E1E1E;
+    }
+    /* Select con flecha personalizada */
+    .select-wrapper {
+      position: relative; width: 431px;
+    }
+    .select-wrapper select { width: 100%; padding-right: 36px; cursor: pointer; }
+    .select-wrapper::after {
+      content: '';
+      position: absolute;
+      right: 12px; top: 50%;
+      transform: translateY(-50%);
+      width: 0; height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid #1E1E1E;
+      pointer-events: none;
+    }
+
+    /* Botón Enviar */
+    .btn-enviar {
+      position: absolute;
+      display: flex; justify-content: center; align-items: center;
+      padding: 14px 24px; gap: 8px;
+      width: 431px; height: 52px;
+      left: 101px; top: 765px;
+      background: #000;
+      box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      font-weight: 500; font-size: 16px; line-height: 150%;
+      color: #fff; border: none; cursor: pointer;
+    }
+    .btn-enviar:hover { background: #222; }
+
+    /* ═══════════════════════════════
+       PANEL TOP 3 (derecha)
+       ─────────────────────────────
+       NOTA: Los recuadros bajo 1#, 2#, 3#
+       recibirán datos de base de datos.
+       Actualmente muestran texto gris
+       como placeholder visual.
+    ═══════════════════════════════ */
+    .resultados {
+      position: absolute;
+      width: 663px; height: 402px;
+      left: 697px; top: 294px;
+      background: #000;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .resultados-title {
+      position: absolute;
+      width: 624px; left: 12px; top: 21px;
+      font-weight: 600; font-size: 48px; line-height: 58px;
+      text-align: center; letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    /* ── Podio ──
+       Posiciones relativas al contenedor .resultados
+       Layout: 2# (izq) — 1# (centro, más alto) — 3# (der)
+    */
+
+    /* Etiqueta 1# — centro, arriba */
+    .rank-label-1 {
+      position: absolute;
+      left: 287px; top: 102px;
+      font-weight: 600; font-size: 40px; line-height: 120%;
+      color: #fff;
+    }
+    /* Recuadro BD 1er lugar — centro */
+    .rank-box-1 {
+      position: absolute;
+      left: 255px; top: 161px;
+      width: 120px; height: 40px;
+      background: #fff;
+      border: 1px solid #D9D9D9;
+      border-radius: 8px;
+      display: flex; align-items: center;
+      padding: 12px 16px;
+      font-weight: 400; font-size: 16px; line-height: 100%;
+      color: #1E1E1E;
+    }
+
+    /* Etiqueta 2# — izquierda, abajo */
+    .rank-label-2 {
+      position: absolute;
+      left: 89px; top: 228px;
+      font-weight: 600; font-size: 40px; line-height: 120%;
+      color: #fff;
+    }
+    /* Recuadro BD 2do lugar — izquierda */
+    .rank-box-2 {
+      position: absolute;
+      left: 57px; top: 280px;
+      width: 120px; height: 40px;
+      background: #fff;
+      border: 1px solid #D9D9D9;
+      border-radius: 8px;
+      display: flex; align-items: center;
+      padding: 12px 16px;
+      font-weight: 400; font-size: 16px; line-height: 100%;
+      color: #1E1E1E;
+    }
+
+    /* Etiqueta 3# — derecha, abajo */
+    .rank-label-3 {
+      position: absolute;
+      left: 507px; top: 228px;
+      font-weight: 600; font-size: 40px; line-height: 120%;
+      color: #fff;
+    }
+    /* Recuadro BD 3er lugar — derecha */
+    .rank-box-3 {
+      position: absolute;
+      left: 475px; top: 280px;
+      width: 120px; height: 40px;
+      background: #fff;
+      border: 1px solid #D9D9D9;
+      border-radius: 8px;
+      display: flex; align-items: center;
+      padding: 12px 16px;
+      font-weight: 400; font-size: 16px; line-height: 100%;
+      color: #1E1E1E;
+    }
+
+    /* ═══════════════════════════════
+       FOOTER
+    ═══════════════════════════════ */
+    .footer {
+      position: absolute;
+      height: 178px; left: 0; right: 0; bottom: 0;
+    }
+    .footer-divider {
+      position: absolute;
+      width: 1280px; left: 80px; top: 1px;
+      border-top: 1px solid #E6E6E6;
+    }
+    .footer-made-by {
+      position: absolute; left: 127px; top: 50px;
+      font-weight: 400; font-size: 24px; line-height: 150%; color: #fff;
+    }
+    .footer-author {
+      position: absolute; left: 186px; top: 106px;
+      font-weight: 400; font-size: 24px; line-height: 150%; color: #fff;
+    }
+    /* IMAGEN: 291375-middle.png — avatar caballero */
+    .footer-avatar {
+      position: absolute; left: 364px; top: 94px;
+      width: 64px; height: 64px; border-radius: 50%;
+      border: 1.6px solid #D9D9D9; overflow: hidden; background: #222;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .footer-avatar img { width: 85%; height: 85%; object-fit: cover; }
+    .footer-repo {
+      position: absolute; left: 991px; top: 55px;
+      font-weight: 500; font-size: 20px; line-height: 150%;
+      text-decoration: underline; color: #CFCFCF;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .footer-phone {
+      position: absolute; left: 991px; top: 115px;
+      font-weight: 500; font-size: 20px; line-height: 150%;
+      color: #fff; display: flex; align-items: center; gap: 12px;
+    }
+    .icon-github {
+      position: absolute; left: 1214px; top: 48px;
+      width: 44px; height: 42px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .icon-phone {
+      position: absolute; left: 1218px; top: 115px;
+      width: 32px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+    }

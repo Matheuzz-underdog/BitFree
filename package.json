@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www dev",
+    "db:estructura": "node migrations/base-estructura",
+    "db:prueba": "node migrations/base-prueba"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,5 +16,8 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
