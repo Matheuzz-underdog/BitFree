@@ -1,335 +1,166 @@
-*, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0F1A34;
-      min-width: 1440px;
-      overflow-x: hidden;
-    }
+a, button { cursor: pointer; }
 
-.page {
-      position: relative;
-      width: 1440px;
-      min-height: 1650px;
-      margin: 0 auto;
-      background: linear-gradient(180deg, #9B9FAA 0%, #0F1A34 100%);
-      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-      overflow-x: hidden;
-    }
+/* ═══════════════════ TOP SECTION ═══════════════════ */
 
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 0 0 81px;
+  flex-shrink: 0;
+}
 
-    .navbar {
-      position: absolute;
-      height: 162px;
-      left: 0;
-      right: 0;
-      top: 0;
-    }
+.top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
-    .nav-logo {
-      position: absolute;
-      left: 81px;
-      top: 6px;
-      width: 121px;
-      height: 151px;
-    }
-    .nav-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+.heading-gnu {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  letter-spacing: -0.02em;
+  color: #000;
+}
 
-    .nav-brand {
-      position: absolute;
-      left: 101px;
-      top: 89px;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 150%;
-      color: #000;
-      text-decoration: none;
-    }
+.copy-gnu {
+  width: 724px;
+  background: #DAC0C0;
+  border-radius: 5px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
 
-    .nav-items {
-      position: absolute;
-      right: 80px;
-      top: 56px;
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      height: 52px;
-    }
-    .nav-items a {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 150%;
-      color: #000;
-      text-decoration: none;
-      white-space: nowrap;
-      cursor: pointer;
-    }
-    .nav-items a:hover {
-      text-decoration: underline;
-    }
-    .btn-salir {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 14px 24px;
-      width: 82px;
-      height: 52px;
-      background: #000;
-      box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 16px;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .btn-salir:hover {
-      background: #222;
-    }
+.copy-text {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 150%;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+}
 
+.top-images {
+  position: relative;
+  width: 532px;
+  height: 600px;
+  flex-shrink: 0;
+}
 
-    .heading-gnu {
-      position: absolute;
-      left: 81px;
-      top: 222px;
-      font-weight: 700;
-      font-size: 64px;
-      line-height: 77px;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
+.img-gnu {
+  position: absolute;
+  width: 420px;
+  height: 405px;
+  right: 0;
+  top: -40px;
+  object-fit: contain;
+}
 
-    .img-gnu {
-      position: absolute;
-      width: 371px;
-      height: 357px;
-      left: 979px;
-      top: 181px;
-      object-fit: contain;
-    }
+.img-tux {
+  position: absolute;
+  width: 365px;
+  height: 435px;
+  left: -10px;
+  top: 120px;
+  object-fit: contain;
+}
 
-    .img-tux {
-      position: absolute;
-      width: 323px;
-      height: 387px;
-      left: 818px;
-      top: 344px;
-      object-fit: contain;
-    }
+/* ═══════════════════ BOTTOM SECTION ═══════════════════ */
 
-    .copy-gnu {
-      position: absolute;
-      width: 724px;
-      height: 360px;
-      left: 68px;
-      top: 344px;
-      background: #DAC0C0;
-      border-radius: 5px;
-      padding: 28px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      overflow: hidden;
-    }
-    .copy-text {
-      font-weight: 500;
-      font-size: 19px;
-      line-height: 150%;
-      color: #000;
-      font-family: 'Inter', sans-serif;
-    }
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  flex-shrink: 0;
+}
 
-    .heading-distros {
-      position: absolute;
-      width: 624px;
-      left: 592px;
-      top: 839px;
-      font-weight: 700;
-      font-size: 64px;
-      line-height: 77px;
-      text-align: right;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
+.heading-distros {
+  width: 624px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin-bottom: 40px;
+  margin-left: 400px;
+}
 
+.bottom-row {
+  display: flex;
+  gap: 63px;
+  justify-content: center;
+}
 
-    .carousel-wrap {
-      position: absolute;
-      width: 602px;
-      height: 368px;
-      left: 68px;
-      top: 961px;
-      border-radius: 28px;
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    .carousel-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.65s ease-in-out;
-      border-radius: 28px;
-      overflow: hidden;
-    }
-    .carousel-slide.active {
-      opacity: 1;
-    }
-    .carousel-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .carousel-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.60) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 16px;
-    }
-    .carousel-label {
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 24px;
-      letter-spacing: 0.15px;
-      color: #fff;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-    }
-    .copy-distros {
-      position: absolute;
-      width: 617px;
-      height: 390px;
-      left: 733px;
-      top: 950px;
-      background: #DAC0C0;
-      border-radius: 5px;
-      padding: 28px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      overflow-y: auto;
-    }
-    .copy-distros .copy-text {
-      font-size: 18px;
-    }
+/* ═══════════════════ CAROUSEL ═══════════════════ */
 
+.carousel-wrap {
+  width: 602px;
+  height: 368px;
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  position: relative;
+}
 
-    .footer {
-      position: absolute;
-      height: 178px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-    .footer-divider {
-      position: absolute;
-      width: 1280px;
-      left: 80px;
-      top: 1px;
-      border-top: 1px solid #E6E6E6;
-    }
-    .footer-made-by {
-      position: absolute;
-      left: 127px;
-      top: 50px;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 150%;
-      color: #fff;
-    }
-    .footer-author {
-      position: absolute;
-      left: 186px;
-      top: 106px;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 150%;
-      color: #fff;
-    }
-    .footer-avatar {
-      position: absolute;
-      left: 364px;
-      top: 94px;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      border: 1.6px solid #D9D9D9;
-      overflow: hidden;
-      background: #222;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .footer-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .footer-repo {
-      position: absolute;
-      left: 991px;
-      top: 55px;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 150%;
-      text-decoration: underline;
-      color: #CFCFCF;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      cursor: pointer;
-    }
-    .footer-repo:hover {
-      color: #fff;
-    }
-    .footer-phone {
-      position: absolute;
-      left: 991px;
-      top: 115px;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 150%;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .icon-github {
-      position: absolute;
-      left: 1214px;
-      top: 48px;
-      width: 44px;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .icon-phone {
-      position: absolute;
-      left: 1218px;
-      top: 115px;
-      width: 32px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.65s ease-in-out;
+  border-radius: 28px;
+  overflow: hidden;
+}
 
-a, button {
-      cursor: pointer;
-    }
-    .copy-distros::-webkit-scrollbar {
-      width: 5px;
-    }
+.carousel-slide.active { opacity: 1; }
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.60) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.carousel-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* ═══════════════════ COPY DISTROS ═══════════════════ */
+
+.copy-distros {
+  width: 617px;
+  height: 390px;
+  background: #DAC0C0;
+  border-radius: 5px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.copy-distros::-webkit-scrollbar { width: 5px; }
+
+.copy-distros .copy-text { font-size: 18px; }
