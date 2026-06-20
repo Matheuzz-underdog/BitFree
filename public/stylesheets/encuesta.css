@@ -201,3 +201,96 @@
   font-weight: 400; font-size: 16px; line-height: 100%;
   color: #1E1E1E;
 }
+
+@media (max-width: 1024px) {
+
+  .page {
+    min-height: 964px;
+  }
+
+  #main {
+    padding: 40px 0 0 79px;
+    gap: 30px;
+  }
+
+  #form-encuesta,
+  .formulario {
+    width: 337px;
+  }
+
+  .form-legend {
+    width: 337px;
+  }
+
+  .field-group {
+    width: 337px;
+  }
+
+  .field-group input,
+  .field-group select {
+    width: 337px;
+  }
+
+  .select-wrapper {
+    width: 337px;
+  }
+
+  .btn-enviar {
+    width: 337px;
+    height: 49px;
+  }
+
+  .resultados {
+    width: 532px;
+    height: 351px;
+    margin-top: 145px;
+  }
+
+  .resultados-title {
+    width: 338px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    font-size: 31px;
+  }
+
+  .rank-label-1 {
+    left: 241px;
+    top: 80px;
+    font-size: 28px;
+  }
+
+  .rank-box-1 {
+    left: 206px;
+    top: 130px;
+    width: 120px;
+    height: 37px;
+  }
+
+  .rank-label-2 {
+    left: 92px;
+    top: 190px;
+    font-size: 28px;
+  }
+
+  .rank-box-2 {
+    left: 57px;
+    top: 237px;
+    width: 120px;
+    height: 36px;
+  }
+
+  .rank-label-3 {
+    left: 397px;
+    top: 187px;
+    font-size: 28px;
+  }
+
+  .rank-box-3 {
+    left: 362px;
+    top: 236px;
+    width: 120px;
+    height: 37px;
+  }
+
+}

@@ -54,3 +54,33 @@
   object-fit: none;
   object-position: top left;
 }
+
+/* ═══════════════════ TABLET 1024px ═══════════════════ */
+
+@media (max-width: 1024px) {
+
+  #main {
+    padding-top: 10px;
+  }
+
+  .page-title {
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .page-subtitle {
+    width: auto;
+    max-width: 630px;
+    margin: 12px auto 0;
+    text-align: center;
+  }
+
+  .timeline-frame {
+    width: 900px;
+    height: 574px;
+    margin: 30px auto 0;
+    border-radius: 20px;
+  }
+
+}

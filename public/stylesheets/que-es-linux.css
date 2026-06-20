@@ -164,3 +164,102 @@ a, button { cursor: pointer; }
 .copy-distros::-webkit-scrollbar { width: 5px; }
 
 .copy-distros .copy-text { font-size: 18px; }
+
+@media (max-width: 1024px) {
+
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: relative;
+  }
+
+  .top-text {
+    align-items: center;
+    gap: 24px;
+  }
+
+  .heading-gnu {
+    width: 308px;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .top-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px 40px;
+  }
+
+  .copy-gnu {
+    width: 388px;
+    text-align: center;
+  }
+
+  .copy-text {
+    font-size: 20px;
+  }
+
+  .top-images {
+    display: contents;
+  }
+
+  .img-gnu {
+    width: 400px;
+    height: 400px;
+    margin: 125px  -110px;
+  }
+
+  .img-tux {
+    width: 420px;
+    height: 380px;
+    margin: 390px auto  30px;
+  }
+
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .heading-distros {
+    width: 441px;
+    margin-left: -70px;
+    margin-bottom: 5px;
+    font-size: 48px;
+  }
+
+  .bottom-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .copy-distros {
+    width: 451px;
+    height: auto;
+    min-height: 480px;
+    overflow: auto;
+    order: -1;
+  }
+
+  .copy-distros .copy-text {
+    font-size: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .carousel-wrap {
+    width: 386px;
+    height: 356px;
+    margin-left: auto;
+  }
+
+  .carousel-slide img[alt="Red Hat Linux"] {
+    object-fit: contain;
+  }
+}
