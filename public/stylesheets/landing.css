@@ -255,3 +255,191 @@
     text-align: center;
   }
 }
+
+/* ═══════════════════ MOBILE 480px ═══════════════════ */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 15px 26px 0;
+    gap: 40px;
+  }
+
+  .hero-title-group {
+    width: 352px;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    width: 352px;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+  }
+
+  .hero p {
+    width: 352px;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .content-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .content-row::before {
+    content: "";
+    display: block;
+    width: 322px;
+    height: 6px;
+    background: linear-gradient(90deg, #713C3C 0%, #070000 100%);
+    border-radius: 12px;
+    order: 0;
+    flex-shrink: 0;
+    margin: 26px 0 35px;
+  }
+
+  .bar {
+    width: 322px;
+    height: 6px;
+    margin: 26px 0 35px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #713C3C 0%, #070000 100%);
+  }
+
+  .bar-left {
+    order: 2;
+  }
+
+  .bar-right {
+    display: block;
+    order: 4;
+  }
+
+  .content-col {
+    width: 351px;
+    padding: 0;
+    margin: 0;
+    gap: 17px;
+  }
+
+  .content-col h2 {
+    font-size: 32px;
+    line-height: 120%;
+    width: 351px;
+  }
+
+  .content-col p {
+    font-size: 18px;
+    line-height: 150%;
+    width: 351px;
+    height: auto;
+  }
+
+  .col-left {
+    order: 1;
+    padding-top: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .col-mid {
+    order: 3;
+    padding-top: 0;
+    gap: 6px;
+  }
+
+  .col-right {
+    order: 5;
+    padding-top: 0;
+    margin: 0;
+    gap: 6px;
+  }
+
+  .penguin-gif {
+    display: none;
+  }
+
+  .btn-action {
+    margin: 0;
+    align-self: center;
+  }
+
+  .col-left .btn-action {
+    width: 160px;
+    height: 35.48px;
+    padding: 0 24px;
+    font-size: 24px;
+    line-height: 150%;
+    justify-content: center;
+  }
+
+  .col-mid .btn-action,
+  .col-right .btn-action {
+    width: 125px;
+    height: 38.07px;
+    padding: 0 24px;
+    font-size: 24px;
+    line-height: 150%;
+    justify-content: center;
+  }
+
+  .arrow {
+    width: 69px;
+    height: 69px;
+    margin: 20px auto 0;
+  }
+
+  .parallax {
+    width: 402px;
+    height: 365px;
+    margin: 0;
+  }
+
+  .parallax-bg-color {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .parallax-bg-black {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .welcome {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    left: 72px;
+    top: 149px;
+    width: 186px;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+
+  .parallax-open .parallax-bg-color { opacity: 0; }
+  .parallax-open .parallax-bg-black { opacity: 1; }
+
+  .parallax-open .welcome {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
