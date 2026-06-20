@@ -294,3 +294,120 @@
   }
 
 }
+
+/* ═══════════════════ MOBILE 480px ═══════════════════ */
+
+@media (max-width: 480px) {
+
+  #main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0 0;
+    gap: 0;
+  }
+
+  #form-encuesta {
+    width: 285px;
+    margin-left: 58px;
+  }
+
+  .formulario {
+    width: 285px;
+    gap: 24px;
+  }
+
+  .form-legend {
+    width: 285px;
+  }
+
+  .form-legend h2 {
+    font-size: 25px;
+    width: 285px;
+  }
+
+  .form-legend p {
+    font-size: 16px;
+    width: 261px;
+  }
+
+  .field-group {
+    width: 285px;
+  }
+
+  .field-group input,
+  .field-group select {
+    width: 285px;
+    height: 40px;
+  }
+
+  .select-wrapper {
+    width: 285px;
+  }
+
+  .btn-enviar {
+    width: 285px;
+    height: 49px;
+  }
+
+  .resultados {
+    width: 377px;
+    height: 302px;
+    margin: 27px 0 0 13px;
+    position: relative;
+  }
+
+  .resultados-title {
+    width: 287px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    font-size: 31px;
+    line-height: 120%;
+  }
+
+  .rank-label-1 {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    font-size: 28px;
+  }
+
+  .rank-box-1 {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 140px;
+    width: 86px;
+    height: 37px;
+  }
+
+  .rank-label-2 {
+    left: 105px;
+    transform: translateX(-50%);
+    top: 190px;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  .rank-box-2 {
+    left: 62px;
+    top: 230px;
+    width: 86px;
+    height: 37px;
+  }
+
+  .rank-label-3 {
+    left: 272px;
+    transform: translateX(-50%);
+    top: 190px;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  .rank-box-3 {
+    left: 229px;
+    top: 230px;
+    width: 86px;
+    height: 37px;
+  }
+
+}
