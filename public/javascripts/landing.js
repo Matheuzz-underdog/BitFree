@@ -22,4 +22,14 @@
       parallax.classList.remove("parallax-open");
     }
   });
+
+  document.querySelectorAll(".accordion-hitarea").forEach(function(el) {
+    el.addEventListener("click", function() {
+      if (window.innerWidth > 480) return;
+      var col = this.closest(".content-col");
+      col.classList.toggle("accordion-open");
+      var expanded = col.classList.contains("accordion-open");
+      this.setAttribute("aria-expanded", expanded);
+    });
+  });
 })();

@@ -84,3 +84,44 @@
   }
 
 }
+
+/* ═══════════════════ MOBILE 480px ═══════════════════ */
+
+@media (max-width: 480px) {
+
+  .page {
+    background: linear-gradient(180deg, #9B9FAA 0%, #0F1A34 100%);
+  }
+
+  #main {
+    padding-top: 0;
+    align-items: flex-start;
+  }
+
+  .page-title {
+    width: 351px;
+    font-size: 44px;
+    line-height: 120%;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: -0.02em;
+  }
+
+  .page-subtitle {
+    width: 351px;
+    font-size: 19px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(0,0,0,0.75);
+    margin: 12px auto 0;
+  }
+
+  .timeline-frame {
+    width: 350px;
+    height: 574px;
+    margin: 31px auto 0;
+    background: #fff;
+    border-radius: 20px;
+  }
+
+}

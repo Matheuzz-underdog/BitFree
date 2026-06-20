@@ -159,6 +159,16 @@
 
 .penguin-gif { display: none; }
 
+.accordion-btn-wrap,
+.accordion-hitarea {
+  display: none;
+}
+
+.accordion-trigger,
+.accordion-content {
+  display: contents;
+}
+
 @media (max-width: 1024px) {
 
   .hero {
@@ -440,6 +450,55 @@
   .parallax-open .welcome {
     opacity: 1;
     visibility: visible;
+  }
+
+  .accordion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .content-col.accordion-open .accordion-content {
+    max-height: 400px;
+  }
+
+  .accordion-trigger {
+    display: flex;
+    align-items: flex-start;
+    width: 351px;
+  }
+
+  .accordion-btn-wrap {
+    display: block;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .accordion-icon {
+    position: absolute;
+    width: 39px;
+    height: 44px;
+    left: 0;
+    top: 2px;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-hitarea {
+    display: block;
+    position: absolute;
+    width: 44px;
+    height: 39px;
+    left: 0;
+    top: 2px;
+    z-index: 2;
+    cursor: pointer;
   }
 
 }
