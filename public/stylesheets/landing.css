@@ -156,3 +156,102 @@
 .parallax:hover .parallax-bg-color { opacity: 0; }
 .parallax:hover .parallax-bg-black { opacity: 1; }
 .parallax:hover .welcome { opacity: 1; transform: translateY(0); }
+
+.penguin-gif { display: none; }
+
+@media (max-width: 1024px) {
+
+  .hero {
+    padding: 35px 90px 0;
+  }
+
+  .content-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 60px;
+    padding-left: 80px;
+  }
+
+  .col-left {
+    width: 396px;
+    padding-top: 20px;
+    margin-right: 28px;
+    order: 1;
+  }
+
+  .col-left h2,
+  .col-mid h2,
+  .col-right h2 {
+    font-size: 32px;
+  }
+
+  .col-left p,
+  .col-mid p,
+  .col-right p {
+    font-size: 18px;
+  }
+
+  .bar-left {
+    height: 264px;
+    margin: 40px 28px 0 0;
+    order: 2;
+  }
+
+  .col-mid {
+    width: 396px;
+    padding-top: 30px;
+    order: 3;
+  }
+
+  .penguin-gif {
+    display: block;
+    width: 262px;
+    height: 260px;
+    order: 4;
+    margin: 60px 0 0 0;
+    object-fit: contain;
+  }
+
+  .col-right {
+    width: 418px;
+    padding-top: 10px;
+    order: 5;
+    margin: 60px 0 0 202px;
+  }
+
+  .bar-right {
+    display: none;
+  }
+
+  .arrow {
+    margin: 80px auto 0;
+  }
+
+  .parallax {
+    width: 1024px;
+    height: 624px;
+    margin: 30px auto 0;
+    margin-left: 0;
+  }
+
+  .parallax-bg-color {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .parallax-bg-black {
+    background-size: cover;
+    background-position: 90% 50%;
+  }
+
+  .welcome {
+    font-size: 56px;
+    line-height: 58px;
+    width: 500px;
+    left: 50%;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -58px;
+    text-align: center;
+  }
+}

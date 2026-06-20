@@ -112,13 +112,18 @@ body {
 .footer-left {
   display: flex;
   align-items: center;
-  gap: 73px;
 }
 
 .footer-info {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.footer-author-row {
+  display: flex;
+  align-items: center;
+  gap: 73px;
 }
 
 .footer-made-by {
@@ -153,13 +158,26 @@ body {
 .footer-right {
   display: flex;
   align-items: center;
-  gap: 32px;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.footer-repo-row,
+.footer-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-repo-row .icon-github svg,
+.footer-phone-row .icon-phone svg {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 .footer-repo {
@@ -185,25 +203,82 @@ body {
   gap: 12px;
 }
 
-.footer-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-
 .icon-github {
-  width: 44px;
-  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .icon-phone {
-  width: 32px;
-  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+
+  body {
+    min-width: 0;
+  }
+
+  .page {
+    width: 1024px;
+  }
+
+  .navbar {
+    padding: 6px 40px 0;
+  }
+
+  .nav-logo {
+    width: 73px;
+    height: 91px;
+  }
+
+  .nav-brand {
+    font-size: 13px;
+    margin: -40px 0 0 10px;
+  }
+
+  .nav-items {
+    gap: 32px;
+  }
+
+  .footer {
+    height: 114px;
+    padding: 30px 40px;
+  }
+
+  .footer-divider {
+    width: calc(100% - 80px);
+    left: 40px;
+  }
+
+  .footer-left { gap: 0; }
+
+  .footer-author-row {
+    gap: 16px;
+  }
+
+  .footer-made-by,
+  .footer-author {
+    font-size: 18px;
+  }
+
+  .footer-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-right { gap: 20px; }
+
+  .footer-repo,
+  .footer-phone {
+    font-size: 17px;
+  }
+
+  .footer-repo-row .icon-github svg,
+  .footer-phone-row .icon-phone svg {
+    width: 20px;
+    height: 20px;
+  }
 }
