@@ -2,7 +2,7 @@
   min-height: 1101px;
 }
 
-/* ═══════════════════ MAIN: FORM + RESULTADOS ROW ═══════════════════ */
+/* =============== MAIN: FORM + RESULTADOS ROW =============== */
 
 #main {
   display: flex;
@@ -13,7 +13,7 @@
   flex: 1;
 }
 
-/* ═══════════════════ FORMULARIO ═══════════════════ */
+
 
 #form-encuesta {
   display: flex;
@@ -121,8 +121,6 @@
 
 .btn-enviar:hover { background: #222; }
 
-/* ═══════════════════ RESULTADOS / TOP 3 ═══════════════════ */
-
 .resultados {
   position: relative;
   width: 663px;
@@ -202,6 +200,7 @@
   color: #1E1E1E;
 }
 
+/* =============== TABLET =============== */
 @media (max-width: 1024px) {
 
   .page {
@@ -295,7 +294,7 @@
 
 }
 
-/* ═══════════════════ MOBILE 480px ═══════════════════ */
+/* ===================== MOBILE 480px ===================== */
 
 @media (max-width: 480px) {
 

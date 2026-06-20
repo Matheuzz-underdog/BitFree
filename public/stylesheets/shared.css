@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ═══════════════════ NAVBAR ═══════════════════ */
+/* ======================== NAVBAR ======================== */
 
 .navbar {
   display: flex;
@@ -89,7 +89,7 @@ body {
 
 .btn-salir:hover { background: #222; }
 
-/* ═══════════════════ FOOTER ═══════════════════ */
+/* ======================== FOOTER ======================== */
 
 .footer {
   display: flex;
@@ -215,7 +215,14 @@ body {
   justify-content: center;
 }
 
-/* ═══════════════════ MOBILE COMPONENTS ═══════════════════ */
+/* ==================== MOBILE COMPONENTS ==================== */
+
+.nav-items ul,
+.nav-items li,
+.nav-menu ul,
+.nav-menu li {
+  display: contents;
+}
 
 .nav-hamburger {
   display: none;
@@ -297,7 +304,7 @@ body {
   }
 }
 
-/* ═══════════════════ MOBILE 480px ═══════════════════ */
+/* ===================== MOBILE 480px ===================== */
 
 @media (max-width: 480px) {
 

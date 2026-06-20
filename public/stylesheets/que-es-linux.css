@@ -1,7 +1,7 @@
 
 a, button { cursor: pointer; }
 
-/* ═══════════════════ TOP SECTION ═══════════════════ */
+/* ====================== TOP SECTION ====================== */
 
 .top-section {
   display: flex;
@@ -69,7 +69,7 @@ a, button { cursor: pointer; }
   object-fit: contain;
 }
 
-/* ═══════════════════ BOTTOM SECTION ═══════════════════ */
+/* ==================== BOTTOM SECTION ==================== */
 
 .bottom-section {
   display: flex;
@@ -98,7 +98,7 @@ a, button { cursor: pointer; }
   justify-content: center;
 }
 
-/* ═══════════════════ CAROUSEL ═══════════════════ */
+/* ======================== CAROUSEL ======================== */
 
 .carousel-wrap {
   width: 602px;
@@ -147,7 +147,7 @@ a, button { cursor: pointer; }
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-/* ═══════════════════ COPY DISTROS ═══════════════════ */
+/* ======================= COPY DISTROS ======================= */
 
 .copy-distros {
   width: 617px;
@@ -264,7 +264,7 @@ a, button { cursor: pointer; }
   }
 }
 
-/* ═══════════════════ MOBILE 480px ═══════════════════ */
+/* ===================== MOBILE 480px ===================== */
 
 @media (max-width: 480px) {
 
